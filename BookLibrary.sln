@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookWEBAPI.WEB", "BookWEBAPI.WEB\BookWEBAPI.WEB.csproj", "{FAD1CDF0-50AA-49E8-AFA9-429C5213A77F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookService.DALL", "BookService.DALL\BookService.DALL.csproj", "{FE0CCE98-ABEC-441C-B584-0A0FCC3A05F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRepository.DALL", "BookRepository.DALL\BookRepository.DALL.csproj", "{BCB04062-F784-4100-9E17-90C8A0ED9128}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAD1CDF0-50AA-49E8-AFA9-429C5213A77F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAD1CDF0-50AA-49E8-AFA9-429C5213A77F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAD1CDF0-50AA-49E8-AFA9-429C5213A77F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAD1CDF0-50AA-49E8-AFA9-429C5213A77F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE0CCE98-ABEC-441C-B584-0A0FCC3A05F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE0CCE98-ABEC-441C-B584-0A0FCC3A05F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE0CCE98-ABEC-441C-B584-0A0FCC3A05F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE0CCE98-ABEC-441C-B584-0A0FCC3A05F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCB04062-F784-4100-9E17-90C8A0ED9128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB04062-F784-4100-9E17-90C8A0ED9128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCB04062-F784-4100-9E17-90C8A0ED9128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB04062-F784-4100-9E17-90C8A0ED9128}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
