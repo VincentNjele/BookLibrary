@@ -16,7 +16,7 @@ namespace BookWEBAPI.WEB
         public string BookTitle { get; set; }
         public string BookDescription { get; set; }
         public string BookAuthor { get; set; }
-        public byte[] BookReleaseDate { get; set; }
+        public DateTime? BookReleaseDate { get; set; }
 
         public virtual ICollection<Rents> Rents { get; set; }
     }

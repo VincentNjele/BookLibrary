@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BookWEBAPI.WEB.Controllers
 {
-    [Route("api/[controller]")]
+    
     [ApiController]
     public class AccountController : ControllerBase
     {
@@ -17,6 +17,7 @@ namespace BookWEBAPI.WEB.Controllers
             _signInManager = signInManager;
 
         }
+        [Route("api/[controller]")]
         [HttpPost]
         public async Task<IActionResult> RegisterUser(Register register)
 
@@ -30,11 +31,28 @@ namespace BookWEBAPI.WEB.Controllers
 
             if (result.Succeeded)
             {
+                await _signInManager.SignInAsync(user, isPersistent: false);
 
-                return Ok();
+                return Ok(result);
 
             }
-            return Ok("Not successful");
+            return Ok(result.Errors);
         }
+
+
+      
+        [HttpPost]
+        [Route("api/[controller]/[action]")]
+        public async Task<IActionResult> LoginUser(LoginModel login)
+
+        {
+
+
+            var user = new IdentityUser { UserName = login.UserName, PasswordHash = login.Password };
+
+            await _signInManager.SignInAsync(user, isPersistent: false);
+            return Ok();
+        }
+
     }
 }
