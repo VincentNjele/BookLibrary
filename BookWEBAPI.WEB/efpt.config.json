@@ -22,6 +22,18 @@
          "ObjectType": 0
       },
       {
+         "Name": "[dbo].[Complaints]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Crimes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MissingPersons]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[Rents]",
          "ObjectType": 0
       },

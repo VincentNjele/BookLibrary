@@ -14,7 +14,7 @@ namespace BookWEBAPI.WEB.Controllers
         public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
            _userManager = userManager;
-            _signInManager = signInManager;
+           _signInManager = signInManager;
 
         }
         [Route("api/[controller]")]
@@ -22,17 +22,24 @@ namespace BookWEBAPI.WEB.Controllers
         public async Task<IActionResult> RegisterUser(Register register)
 
         {
-                
-            
-
-            var user = new IdentityUser { UserName = register.UserName };
-
+            var rand = new Random();
+            var num = rand.Next(00000000, 999999999).ToString();
+            var user = new IdentityUser { UserName = num };
+           
             var result = await _userManager.CreateAsync(user, register.Password);
 
             if (result.Succeeded)
             {
+                if(result.Succeeded == true)
+                {
 
-                return Ok(result);
+                    return Ok(Convert.ToInt32(num));
+                } else
+                {
+                    return Ok(result);
+
+                }
+               
 
             }
             return Ok(result.Errors);
@@ -56,6 +63,19 @@ namespace BookWEBAPI.WEB.Controllers
             
             return BadRequest(user.IsNotAllowed);
         }
+
+        [HttpGet]
+        [Route("api/[controller]/[action]")]
+        public async Task<IActionResult> getRand()
+
+        {
+            var rand = new Random();
+
+            var num = rand.Next(000000000, 999999999);
+
+            return Ok(num);
+        }
+
 
     }
 }
